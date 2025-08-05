@@ -4,7 +4,7 @@ import sys
 def embed(image_path, text_path, output_path):
     img = Image.open(image_path).convert("RGB")
     with open(text_path, "r", encoding="utf-8") as f:
-        msg = f.read() + chr(0)  # Null terminator
+        msg = f.read() + chr(0)
     bits = ''.join(format(ord(c), "08b") for c in msg)
 
     pixels = img.load()
