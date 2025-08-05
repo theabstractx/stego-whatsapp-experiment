@@ -1,0 +1,20 @@
+It is assumed that all the files are in the same folder.
+This only runs with torch version 1.0.0, so you might have to switch your python version to make it work.
+
+1. Install python dependencies:
+pip install pillow bitarray scikit-image argparse steganogan
+
+2. Embed the message
+python encode.py --input input.png --output stego.png --message "top secret"
+
+
+(cover.png is the original picture)
+
+3. Send stego.png via Whatsapp and download it again as received.jpg
+
+4. Extract the message
+python lsb_extract.py received.jpg extracted.txt
+
+5. Evaluate
+python evaluate.py cover.png received.jpg secret.txt extracted.txt
+

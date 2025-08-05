@@ -1,0 +1,15 @@
+It is assumed that all the files are in the same folder.
+For steps 2 and 3, you can try it without --add-exports java.base/sun.security.provider=ALL-UNNAMED, if you have an older java version.
+
+1. Download f5 from https://code.google.com/archive/p/f5-steganography/downloads and download java as well.
+
+2. Embed the message
+java --add-exports java.base/sun.security.provider=ALL-UNNAMED -jar f5.jar e -e secret.txt -p test123 cover.jpg stego.jpg
+
+3. Send stego.jpg via Whatsapp and download it again as received.jpg
+
+4. Extract the message
+java --add-exports java.base/sun.security.provider=ALL-UNNAMED -jar f5.jar x -p test123 -e extracted.txt stego.jpg
+
+5. Evaluate
+python evaluate.py stego.png received.jpg secret.txt extracted.txt
