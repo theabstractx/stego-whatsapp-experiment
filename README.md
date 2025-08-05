@@ -9,7 +9,7 @@ Four different steganography techniques are implemented, each in its own folder:
 - **Blind Watermark** – Hides data using a blind watermarking library (robust to some distortions).
 - **SteganoGAN** – Uses a deep learning approach (the SteganoGAN library) to embed data in images.
 
-Each method has its own setup requirements and usage steps, detailed below. To reproduce the experiments, follow the instructions for each technique. **All images and files should be kept in the same working directory** (as assumed by the scripts).
+Each method has its own setup requirements and usage steps, detailed below. To reproduce the experiments, follow the instructions for each technique. To copy and paste the commands, **all images and files should be in the same working directory** (as assumed by the scripts).
 
 ---
 
