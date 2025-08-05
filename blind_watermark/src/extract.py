@@ -2,7 +2,6 @@ import argparse
 from blind_watermark import WaterMark
 
 def bits_to_bytes(bits):
-    # Bool → Int → Byte
     bit_str = ''.join(['1' if bit else '0' for bit in bits])
     return bytes(int(bit_str[i:i+8], 2) for i in range(0, len(bit_str), 8))
 
